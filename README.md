@@ -1,5 +1,5 @@
 # SMDropDownList
-手持设备中使用原生select下拉控件效果并不尽人意，SMDropDownList下拉弹框支持(多选/单选)，适用于移动端下拉效果，依赖Jquery，有问题请发邮件：sm0210@qq.com
+在移动端手持设备中使用原生select下拉控件效果并不尽人意，SMDropDownList下拉弹框支持(多选/单选)，适用于移动端下拉效果，依赖Jquery，有问题请发邮件：sm0210@qq.com
 
 ## 效果
 
