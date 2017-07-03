@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<title>SMDropDownList下拉弹框</title>
+ <!--
+    @author:SM
+    @e-mail:sm0210@qq.com
+    @desc:SMDropDownList下拉弹框
+    @version:SMDropDownList下拉弹框 0.1
+-->
+<!-- SMDropDownList样式 -->
+<link rel="stylesheet" type="text/css" href="css/SMDropDownList.css">
+<!-- jquery -->
+<script language="javascript" src="js/jquery.js"></script>
+<!-- jquery-SMDropDownList -->
+<script language="javascript" src="js/jquery-SMDropDownList.js"></script>
+<!-- 案例 -->
+<script language="javascript">
+	$(function(){
+		//模拟数据
+		var data = [
+			{name:'下拉选项一',id:'00000010110302063'},
+			{name:'下拉选项二',id:'00000010110302064'},
+			{name:'下拉选项三',id:'00000010110302065'},
+			{name:'下拉选项四',id:'00000010110302066'},
+			{name:'下拉选项五',id:'00000010110302067'}
+		];
+		//配置
+		var config = {
+				//可配置参数：标题
+				title: '下拉选择框',
+				//必须参数：结果集
+				result: data,
+				//必须参数：模板
+				itemTpl: [
+					'<div class="ui-list-info">',
+					'<h4 class="ui-nowrap left">${id}<span class="ui-nowrap-span">${name}</span></h4>',
+					'</div>',
+				],
+				//是否显示标题
+				//isShowTitle: false,
+				//可配置参数：1.false,随内容撑出高度，2.num：固定高度，超出滚动显示,默认[220]
+				//fixedHeight: false,
+				//可配参数：选择完成后是否自动关闭,默认[true]
+				//autoClose: false,
+				//可配置参数：每行是否显示右边箭头，默认[false]
+				//rightArrow: false,
+				//可配置参数：是否多选[默认单选]
+				checkbox: true,
+				//单击item事件
+				onClick: itemClick
+        	};
+		//实例化下拉组件
+		var smDropDownList = $.initSMDropDownList(config);
+		//显示
+		//
+		$('#onShow').click(function(){
+			//
+			smDropDownList.show();
+			//显示时传入data
+			//smDropDownList.show(data);
+		});
+		/*
+			监听事件
+		*/
+		function itemClick(data){
+			//
+			console.log(data);
+		}
+	});
+</script>
+</head>
+
+<body>
+<br/>
+<!-- SMDropDownList下拉弹框Begin -->
+<div id="onShow">点击显示下拉框</div>
+<!-- SMDropDownList下拉弹框End -->
+</body>
+</html>
