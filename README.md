@@ -39,9 +39,9 @@ var config = {
       checkbox: true,
       //单击item事件
       onClick: itemClick
-        	};
-		//实例化下拉组件
-		var smDropDownList = $.initSMDropDownList(config);
+};
+//实例化下拉组件
+var smDropDownList = $.initSMDropDownList(config);
 }); 
  ````
  
