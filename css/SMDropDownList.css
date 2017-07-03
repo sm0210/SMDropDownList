@@ -201,8 +201,8 @@ body {
 	默认背景色
 */
 .x-dropDownList h4 {
-	background-color: #fff;
-	/* text-align: center; */
+	/*background-color: #fff;
+	text-align: center; */
 	font-size: 14px;
 	color: #282828;
 	padding-left: 16px;
